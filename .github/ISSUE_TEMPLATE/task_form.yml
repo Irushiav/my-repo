@@ -1,0 +1,33 @@
+name: "📌 New Task"
+description: "Fill this form to create a new task in the To Do list"
+title: "[Task] "
+labels: ["task"]
+assignees:
+  - your-github-username   # optional
+body:
+  - type: markdown
+    attributes:
+      value: "Please fill out all fields below."
+  - type: input
+    id: summary
+    attributes:
+      label: "Task Summary"
+      description: "Short title of the task"
+      placeholder: "Example: Fix login button bug"
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: "Details"
+      description: "Describe the task"
+      placeholder: "Detailed description..."
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - High
+        - Medium
+        - Low
+      required: true
